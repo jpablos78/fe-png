@@ -1,0 +1,29 @@
+<div class="center-login2 mt-4">
+  <p-panel header="Unidades de Tiempo" styleClass="my-panel">
+    <form [formGroup]="unidadTiempoForm">
+      <div>
+        <div class="p-grid">
+          <div class="p-col-12 p-lg-2">
+            <div class="ui-float-label mt-3">
+              <input id="float-input" type="text" size="30" pInputText class="ng-dirty ng-invalid"
+                formControlName="txtCodigo">
+              <label for="float-input">Código</label>
+            </div>
+          </div>
+
+          <div class="p-col-12 p-lg-10">
+            <div class="ui-float-label mt-3">
+              <input id="float-input" type="text" size="30" pInputText class="ng-dirty ng-invalid"
+                formControlName="txtTiempo">
+              <label for="float-input">Tiempo</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button pButton type="submit" label="Grabar" class="btn btn-block"></button>
+        </div>
+      </div>
+    </form>
+  </p-panel>
+</div>
