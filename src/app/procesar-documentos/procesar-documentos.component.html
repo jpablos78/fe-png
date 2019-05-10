@@ -1,0 +1,57 @@
+<div class="mt-4">
+  <p-table #dt [columns]="cols" [value]="documentos" [responsive]="true" [paginator]="true" [rows]="7"
+    [(selection)]="selectedCars3" dataKey="documento">
+    <ng-template pTemplate="caption">
+      Procesar Documentos
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns" [ngStyle]="{'width': col.width}" [pSortableColumn]="col.field">
+          {{col.header}}
+          <p-sortIcon [field]="col.field" ariaLabel="Activate to sort"
+            ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order">
+          </p-sortIcon>
+        </th>
+        <th style="width: 3em">
+          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+        </th>
+      </tr>
+      <tr>
+        <th *ngFor="let col of columns" [ngSwitch]="col.field">
+          <input *ngSwitchCase="'empresa'" pInputText type="text"
+            (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+
+          <input *ngSwitchCase="'tipo'" pInputText type="text"
+            (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+
+          <input *ngSwitchCase="'cliente'" pInputText type="text"
+            (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+
+          <input *ngSwitchCase="'documento'" pInputText type="text"
+            (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+
+          <input *ngSwitchCase="'fecha'" pInputText type="text"
+            (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+        </th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-documentos let-columns="columns">
+      <tr [pSelectableRow]="documentos">
+        <td *ngFor="let col of columns">
+          {{documentos[col.field]}}
+        </td>
+        <td>
+          <p-tableCheckbox [value]="documentos"></p-tableCheckbox>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary" let-unidadTiempo>
+      <div>
+        <button type="button" pButton label="Procesar" class="btn btn-block"></button>
+        <p-splitButton label="Procesar y enviar Mail" icon="pi pi-file" [model]="itemsButton">
+        </p-splitButton>
+      </div>
+    </ng-template>
+  </p-table>
+</div>

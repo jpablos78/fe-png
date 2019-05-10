@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "codigo": 0,
+            "tiempo": "Ninguno"
+        },
+        {
+            "codigo": 1,
+            "tiempo": "Dias"
+        },
+        {
+            "codigo": 2,
+            "tiempo": "Meses"
+        },
+        {
+            "codigo": 3,
+            "tiempo": "Años"
+        }
+    ]
+}

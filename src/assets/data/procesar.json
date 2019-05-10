@@ -1,0 +1,81 @@
+{
+    "data": [
+        {
+            "empresa": "GLOBALTEX",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000123",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "GLOBALTEX",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000124",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "TEXFASHION",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000125",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "GLOBALTEX",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000126",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "TEXFASHION",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000127",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "TEXFASHION",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000128",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "TEXFASHION",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000129",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "GLOBALTEX",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000130",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "TEXFASHION",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000131",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "GLOBALTEX",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000132",
+            "fecha": "01/01/2019"
+        },
+        {
+            "empresa": "GLOBALTEX",
+            "tipo": "FAC",
+            "cliente": "Juan Perez",
+            "documento": "001001-000000133",
+            "fecha": "01/01/2019"            
+        }
+    ]
+}

@@ -11,6 +11,9 @@ import { MenuModule } from 'primeng/menu';
 import { SlideMenuModule } from 'primeng/slidemenu';
 import { DropdownModule } from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
+import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
+import { SplitButtonModule } from 'primeng/splitbutton';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { CalendarModule } from 'primeng/calendar';
         SlideMenuModule,
         MenuModule,
         DropdownModule,
-        CalendarModule
+        CalendarModule,
+        TableModule,
+        DialogModule,
+        SplitButtonModule
     ],
     exports: [
         PanelModule,
@@ -38,7 +44,10 @@ import { CalendarModule } from 'primeng/calendar';
         SlideMenuModule,
         MenuModule,
         DropdownModule,
-        CalendarModule
+        CalendarModule,
+        TableModule,
+        DialogModule,
+        SplitButtonModule
     ],
 })
 export class PrimeNGModule { }

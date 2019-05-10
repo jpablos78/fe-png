@@ -1,0 +1,36 @@
+{
+    "data": [
+        {
+            "empresa": "005",
+            "nombre": "AMERICAN",
+            "tipo": "FAC",
+            "serieNumero": "001001-0000001",
+            "fecha": "01/01/2019",
+            "fechaAutorizacion": "01/01/2019"
+        },
+        {
+            "empresa": "008",
+            "nombre": "GLOBALTEX",
+            "tipo": "NC",
+            "serieNumero": "001001-0000001",
+            "fecha": "01/01/2019",
+            "fechaAutorizacion": "01/01/2019"
+        },
+        {
+            "empresa": "009",
+            "nombre": "TEXFASHION",
+            "tipo": "GUI",
+            "serieNumero": "001001-0000001",
+            "fecha": "01/01/2019",
+            "fechaAutorizacion": "01/01/2019"
+        },
+        {
+            "empresa": "011",
+            "nombre": "SURIGAT",
+            "tipo": "RET",
+            "serieNumero": "001001-0000001",
+            "fecha": "01/01/2019",
+            "fechaAutorizacion": "01/01/2019"
+        }
+    ]
+}

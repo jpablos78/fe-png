@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -16,6 +17,14 @@ import { UnidadTiempoComponent } from './unidad-tiempo/unidad-tiempo.component';
 import { FormasPagoComponent } from './formas-pago/formas-pago.component';
 import { ConsultaDocumentosComponent } from './consulta-documentos/consulta-documentos.component';
 
+import { ConsultaService } from './services/consulta.service';
+import { CrudUnidadTiempoComponent } from './crud-unidad-tiempo/crud-unidad-tiempo.component';
+import { ProcesarDocumentosComponent } from './procesar-documentos/procesar-documentos.component';
+import { CrudFormasPagoComponent } from './crud-formas-pago/crud-formas-pago.component';
+import { MantenimientoUsuariosComponent } from './components/modulo-general/usuarios/mantenimiento-usuarios/mantenimiento-usuarios.component';
+import { CambioClaveComponent } from './components/modulo-general/usuarios/cambio-clave/cambio-clave.component';
+import { FavoritosComponent } from './components/modulo-general/usuarios/favoritos/favoritos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +34,13 @@ import { ConsultaDocumentosComponent } from './consulta-documentos/consulta-docu
     ParametrosComponent,
     UnidadTiempoComponent,
     FormasPagoComponent,
-    ConsultaDocumentosComponent
+    ConsultaDocumentosComponent,
+    CrudUnidadTiempoComponent,
+    ProcesarDocumentosComponent,
+    CrudFormasPagoComponent,
+    MantenimientoUsuariosComponent,
+    CambioClaveComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
@@ -33,10 +48,12 @@ import { ConsultaDocumentosComponent } from './consulta-documentos/consulta-docu
     PrimeNGModule,
     AppRoutesModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    ConsultaService
   ],
   bootstrap: [AppComponent]
 })

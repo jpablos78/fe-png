@@ -1,0 +1,116 @@
+<div class=" p-grid mt-4">
+  <div class="p-col-1">
+  </div>
+
+  <div class="p-col-10">
+    <p-table #dt [columns]="cols" [value]="formasPago" [responsive]="true" [paginator]="true" [rows]="4">
+      <ng-template pTemplate="caption">
+        Formas de Pago
+      </ng-template>
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th *ngFor="let col of columns" [ngStyle]="{'width': col.width}" [pSortableColumn]="col.field">
+            {{col.header}}
+            <p-sortIcon [field]="col.field" ariaLabel="Activate to sort"
+              ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order">
+            </p-sortIcon>
+          </th>
+          <th [ngStyle]="{'width':'7%'}"></th>
+        </tr>
+        <tr>
+          <th *ngFor="let col of columns" [ngSwitch]="col.field">
+            <input *ngSwitchCase="'codigo'" pInputText type="text"
+              (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+
+            <input *ngSwitchCase="'forma_pago'" pInputText type="text"
+              (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+
+            <input *ngSwitchCase="'fecha_inicio'" pInputText type="text"
+              (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+
+            <input *ngSwitchCase="'fecha_fin'" pInputText type="text"
+              (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+
+            <input *ngSwitchCase="'estado'" pInputText type="text"
+              (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+          </th>
+          <th></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-formaPago let-columns="columns">
+        <tr [pSelectableRow]="formaPago">
+          <td *ngFor="let col of columns">
+            {{formaPago[col.field]}}
+          </td>
+          <td><button type="button" pButton icon="pi pi-pencil" (click)="modificarRegistro(formaPago)"></button></td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="summary" let-formaPago>
+        <div style="text-align:left">
+          <button type="button" pButton icon="pi pi-plus" (click)="showDialogToAdd()" label="Add"></button>
+        </div>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <div class="p-col-1">
+  </div>
+</div>
+
+<p-dialog header="Agregar Forma de Pago" [(visible)]="displayDialog" [responsive]="true" showEffect="fade"
+  [modal]="true" [style]="{width: '500px'}">
+  <div class="p-grid">
+    <div class="p-col-3">
+      <label for="codigo">Código</label>
+    </div>
+    <div class="p-col-9">
+      <input pInputText id="codigo" [(ngModel)]="formaPago.codigo" />
+    </div>
+
+    <div class="p-col-3">
+      <label for="forma_pago">Forma de Pago</label>
+    </div>
+    <div class="p-col-9">
+      <input pInputText id="forma_pago" [(ngModel)]="formaPago.forma_pago" />
+    </div>
+
+    <div class="p-col-3">
+      <label for="fecha_inicio">Fecha de Inicio</label>
+    </div>
+    <div class="p-col-9">
+      <input pInputText id="fecha_inicio" [(ngModel)]="formaPago.fecha_inicio" />
+    </div>
+
+    <div class="p-col-3">
+      <label for="fecha_fin">Fecha de Fin</label>
+    </div>
+    <div class="p-col-9">
+      <input pInputText id="fecha_fin" [(ngModel)]="formaPago.fecha_fin" />
+    </div>
+
+    <div class="p-col-3">
+      <label for="estado">Estado</label>
+    </div>
+    <div class="p-col-9">
+      <input pInputText id="estado" [(ngModel)]="formaPago.estado" />
+    </div>
+  </div>
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button type="button" pButton icon="pi pi-times" (click)="delete()" label="Delete"></button>
+      <button type="button" pButton icon="pi pi-check" (click)="save()" label="Save"></button>
+    </div>
+  </p-footer>
+</p-dialog>
+
+<p-dialog [(visible)]="displayError" [responsive]="true" showEffect="fade" [modal]="true" styleClass="my-panel">
+  <p-header>
+    Mensaje del Sistema
+  </p-header>
+  {{errorMsg}}
+  <p-footer>
+    <div class="ui-dialog-buttonpane ui-helper-clearfix">
+      <button pButton type="button" label="Ok" class="ui-button-danger"></button>
+    </div>
+  </p-footer>
+</p-dialog>

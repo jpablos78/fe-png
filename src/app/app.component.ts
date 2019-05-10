@@ -44,16 +44,30 @@ export class AppComponent implements OnInit {
           routerLink: ['/unidad-tiempo']
         },
         {
+          label: 'CRUD Unidades de Tiempo',
+          icon: 'pi pi-fw pi-clock',
+          routerLink: ['/crud-unidad-tiempo']
+        },
+        {
           label: 'Formas de Pago',
           icon: 'pi pi-fw pi-dollar',
           routerLink: ['/formas-pago']
-        }
+        },
+        {
+          label: 'CRUD Formas de Pago',
+          icon: 'pi pi-fw pi-dollar',
+          routerLink: ['/crud-formas-pago']
+        },
       ]
     },
     {
       label: 'Transacciones',
       items: [
-        { label: 'Procesar Documentos Electrónicos', icon: 'pi pi-fw pi-pencil' }
+        {
+          label: 'Procesar Documentos Electrónicos',
+          icon: 'pi pi-fw pi-pencil',
+          routerLink: ['/procesar-documentos']
+        }
       ]
     },
     {
